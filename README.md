@@ -1,5 +1,6 @@
 # AI-SDLC Prompts — servidor MCP
 
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/16968/badge)](https://www.bestpractices.dev/projects/16968)
 [![CI](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/codeql.yml/badge.svg)](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/codeql.yml)
 [![npm](https://img.shields.io/npm/v/ai-sdlc-prompts-mcp)](https://www.npmjs.com/package/ai-sdlc-prompts-mcp)
