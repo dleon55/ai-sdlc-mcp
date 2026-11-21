@@ -5,9 +5,8 @@
   "description": "112 SDLC prompts (ES/EN) for AI coding agents, each with its operating contract.",
   "websiteUrl": "https://prompts.lionsystems.com.mx",
   "repository": {
-    "url": "https://github.com/dleon55/ai-sdlc-prompts",
-    "source": "github",
-    "subfolder": "mcp-server"
+    "url": "https://github.com/dleon55/ai-sdlc-mcp",
+    "source": "github"
   },
   "version": "1.0.2",
   "packages": [

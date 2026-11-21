@@ -1,8 +1,12 @@
 # AI-SDLC Prompts — servidor MCP
 
-Expone la biblioteca de prompts [AI-SDLC Pro](../README.md) (112 prompts, ES/EN) a agentes de IA (Claude Code, Claude Desktop, Cursor, etc.) vía [Model Context Protocol](https://modelcontextprotocol.io), transporte stdio.
+[![CI](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/codeql.yml/badge.svg)](https://github.com/dleon55/ai-sdlc-mcp/actions/workflows/codeql.yml)
+[![npm](https://img.shields.io/npm/v/ai-sdlc-prompts-mcp)](https://www.npmjs.com/package/ai-sdlc-prompts-mcp)
 
-Solo lectura: ningún tool escribe en el repositorio, en GitHub ni en ningún sistema externo. Todo el contenido se sirve desde `data/prompts-full.json`, generado por `python build.py` en la raíz del repo — este servidor nunca parsea Markdown por su cuenta.
+Expone la biblioteca de prompts [AI-SDLC Pro](https://prompts.lionsystems.com.mx/) (112 prompts, ES/EN) a agentes de IA (Claude Code, Claude Desktop, Cursor, etc.) vía [Model Context Protocol](https://modelcontextprotocol.io), transporte stdio.
+
+Solo lectura: ningún tool escribe en el repositorio, en GitHub ni en ningún sistema externo. Todo el contenido se sirve desde `data/prompts-full.json`, una instantánea generada por el sitio de la biblioteca — este servidor nunca parsea Markdown por su cuenta.
 
 Todo prompt que sale de aquí viaja con su **contrato de operación**: techo de
 autonomía, herramientas permitidas, criterios de detención y evidencia mínima.
@@ -14,7 +18,7 @@ anexa por defecto — ver [Contrato de operación](#contrato-de-operación).
 > Publicado en npm: [`ai-sdlc-prompts-mcp`](https://www.npmjs.com/package/ai-sdlc-prompts-mcp).
 >
 > Licencia: el código de este servidor es **MIT**; los prompts que sirve son
-> **CC BY 4.0** (uso comercial permitido, con atribución). Ver [`LICENSE`](LICENSE).
+> **CC BY 4.0** (uso comercial permitido, con atribución). Ver [`LICENSE`](LICENSE) y [`NOTICE.md`](NOTICE.md).
 
 Sin clonar el repositorio:
 
@@ -25,7 +29,8 @@ npx ai-sdlc-prompts-mcp
 Desde el clon local:
 
 ```bash
-cd mcp-server
+git clone https://github.com/dleon55/ai-sdlc-mcp.git
+cd ai-sdlc-mcp
 npm install
 ```
 
@@ -47,7 +52,7 @@ Agrega esto a la configuración de servidores MCP del cliente (`claude_desktop_c
   "mcpServers": {
     "ai-sdlc-prompts": {
       "command": "node",
-      "args": ["/ruta/absoluta/a/ai-sdlc-prompts/mcp-server/index.js"]
+      "args": ["/ruta/absoluta/a/ai-sdlc-mcp/index.js"]
     }
   }
 }
@@ -134,9 +139,16 @@ Si tu agente admite *skills* (`SKILL.md`), los mismos prompts están empaquetado
 npm test    # node --test test/ -- 29 tests: dataStore, resolvePrompt, integración MCP real (InMemoryTransport)
 ```
 
-Los datos (`data/prompts-full.json`) se regeneran desde la raíz del repo con `python build.py` — no editar ese archivo a mano. Cualquier cambio de contenido de prompts se hace en `ai_sdlc_pro_prompts/*.md`.
+Los datos (`data/prompts-full.json`) se regeneran en el repositorio de la biblioteca y llegan aquí por PR — no editar ese archivo a mano. Ver [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Alcance de esta primera versión
 
 - Se ejecuta en la máquina de quien lo usa (`npx -y ai-sdlc-prompts-mcp`, o `node index.js` desde el clon).
 - Transporte stdio únicamente — sin servidor HTTP.
+
+## Contribuir y seguridad
+
+- Contribuciones, pruebas y estilo: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- Reporte privado de vulnerabilidades: [`SECURITY.md`](SECURITY.md)
+- Cambios por versión: [`CHANGELOG.md`](CHANGELOG.md)
+- Issues: <https://github.com/dleon55/ai-sdlc-mcp/issues>

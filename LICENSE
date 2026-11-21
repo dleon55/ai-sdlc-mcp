@@ -19,18 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---------------------------------------------------------------------------------
-NOTA SOBRE EL CONTENIDO EMBEBIDO
-
-La licencia MIT anterior cubre el CÓDIGO de este servidor.
-
-El archivo data/prompts-full.json contiene los 112 prompts de la biblioteca
-AI-SDLC Pro, que se distribuyen bajo Creative Commons Atribución 4.0
-Internacional (CC BY 4.0) -- https://creativecommons.org/licenses/by/4.0/
-
-Es decir: puedes usar, adaptar y redistribuir los prompts, incluso
-comercialmente, dando crédito a AI-SDLC Pro con enlace a
-https://prompts.lionsystems.com.mx
-
-Ver el archivo LICENSE en la raíz del repositorio para el detalle completo.

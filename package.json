@@ -13,7 +13,8 @@
     "src/",
     "data/prompts-full.json",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "NOTICE.md"
   ],
   "keywords": [
     "mcp",
@@ -28,16 +29,16 @@
   "homepage": "https://prompts.lionsystems.com.mx",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dleon55/ai-sdlc-prompts.git",
-    "directory": "mcp-server"
+    "url": "git+https://github.com/dleon55/ai-sdlc-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/dleon55/ai-sdlc-prompts/issues"
+    "url": "https://github.com/dleon55/ai-sdlc-mcp/issues"
   },
   "author": "LionSystems",
   "scripts": {
     "start": "node index.js",
-    "test": "node --test"
+    "test": "node --test",
+    "lint": "eslint --max-warnings 0 ."
   },
   "engines": {
     "node": ">=18"
@@ -46,5 +47,10 @@
     "@modelcontextprotocol/sdk": "^1.32.0",
     "zod": "^4.6.7"
   },
-  "license": "MIT AND CC-BY-4.0"
+  "license": "MIT AND CC-BY-4.0",
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "globals": "^17.14.0"
+  }
 }
