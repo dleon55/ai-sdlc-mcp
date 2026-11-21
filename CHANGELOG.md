@@ -5,6 +5,11 @@ el proyecto sigue [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [1.0.3] - 2026-11-21
+
+### Cambiado
+- `@modelcontextprotocol/sdk` 1.32.0 → 1.32.2.
+
 ### Cambiado
 - El desarrollo se mueve a su propio repositorio público
   (`dleon55/ai-sdlc-mcp`), con historial conservado desde `mcp-server/` de
