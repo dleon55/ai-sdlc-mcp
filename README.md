@@ -155,8 +155,9 @@ read-only and never touches the network.
 
 - Run without cloning: `npx ai-sdlc-prompts-mcp`
 - Client config: `{"mcpServers":{"ai-sdlc-prompts":{"command":"npx","args":["-y","ai-sdlc-prompts-mcp"]}}}`
-- Tools: list/search prompts, get a prompt, resolve placeholders (appending the
-  operating contract), framework and token registry — see the tool table above.
+- Tools: `list_prompts`, `get_prompt`, `resolve_prompt` (fills placeholders and
+  appends the operating contract), `get_framework`, `recommend_next` — see the
+  tool table above.
 - Develop: `npm ci && npm test && npm run lint` (see `CONTRIBUTING.md`).
 - License: code MIT (`LICENSE`); embedded prompts CC BY 4.0 (`NOTICE.md`).
 - Bug reports, feature requests and code comments are welcome **in English or
