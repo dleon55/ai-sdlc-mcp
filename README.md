@@ -146,6 +146,23 @@ Los datos (`data/prompts-full.json`) se regeneran en el repositorio de la biblio
 - Se ejecuta en la máquina de quien lo usa (`npx -y ai-sdlc-prompts-mcp`, o `node index.js` desde el clon).
 - Transporte stdio únicamente — sin servidor HTTP.
 
+## English
+
+**AI-SDLC Prompts MCP server** exposes the AI-SDLC Pro library (112 software
+development lifecycle prompts, Spanish/English) to AI agents (Claude Code,
+Claude Desktop, Cursor, …) over the Model Context Protocol (stdio). It is
+read-only and never touches the network.
+
+- Run without cloning: `npx ai-sdlc-prompts-mcp`
+- Client config: `{"mcpServers":{"ai-sdlc-prompts":{"command":"npx","args":["-y","ai-sdlc-prompts-mcp"]}}}`
+- Tools: list/search prompts, get a prompt, resolve placeholders (appending the
+  operating contract), framework and token registry — see the tool table above.
+- Develop: `npm ci && npm test && npm run lint` (see `CONTRIBUTING.md`).
+- License: code MIT (`LICENSE`); embedded prompts CC BY 4.0 (`NOTICE.md`).
+- Bug reports, feature requests and code comments are welcome **in English or
+  Spanish** via [GitHub issues](https://github.com/dleon55/ai-sdlc-mcp/issues).
+  Security reports: privately, see `SECURITY.md`.
+
 ## Contribuir y seguridad
 
 - Contribuciones, pruebas y estilo: [`CONTRIBUTING.md`](CONTRIBUTING.md)
