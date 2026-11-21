@@ -50,7 +50,7 @@
   "license": "MIT AND CC-BY-4.0",
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "eslint": "^9.39.5",
+    "eslint": "^10.15.0",
     "globals": "^17.14.0"
   }
 }
