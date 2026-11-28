@@ -108,7 +108,7 @@ jobs:
       # GitHub, sin tokens ni secretos. Se fija la versión del publicador y se
       # verifica su firma Sigstore antes de ejecutarlo.
       - name: Instalar cosign
-        uses: sigstore/cosign-installer@756fe2d284c7292c4e9b62c8a28f1e5629c59532 # v4.1.3
+        uses: sigstore/cosign-installer@881c63bd87e38389154debd8331404ce7ca8a3ab # v4.1.4
 
       - name: Descargar y verificar mcp-publisher
         env:
